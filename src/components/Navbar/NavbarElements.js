@@ -1,7 +1,8 @@
-import { FaBars } from 'react-icons/fa';
 import { NavLink as Link } from 'react-router-dom';
 import styled from 'styled-components';
 
+
+/*
 export const Nav = styled.nav`
   background: #000;
   height: 80px;
@@ -9,12 +10,10 @@ export const Nav = styled.nav`
   justify-content: space-between;
   padding: 0.5rem calc((100vw - 1000px) / 2);
   z-index: 10;
-  /* Third Nav */
-  /* justify-content: flex-start; */
 `;
-
+*/
 export const NavLink = styled(Link)`
-  color: #fff;
+  color: red;
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -26,17 +25,51 @@ export const NavLink = styled(Link)`
   }
 `;
 
-export const Bars = styled(FaBars)`
-  display: none;
-  color: #fff;
-  @media screen and (max-width: 768px) {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(-100%, 75%);
-    font-size: 1.8rem;
-    cursor: pointer;
+    
+    
+   export const Nav = styled.div`
+  
+   background: #000;
+   height: 80px;
+   display: flex;
+   justify-content: space-between;
+   padding: 0.5rem calc((100vw - 1000px) / 2);
+   z-index: 10;
+   color: #3451d2;
+   @media screen and (max-width: 768px) {
+     
+     background-color: #0D2538;
+     position: fixed;
+     height: 100vh;
+     width: 300px
+     display: block;
+     padding-top: 3.5rem;
+     
+     top: 0;
+     right: 0;
+     transform: translate(-100%, 75%);
+     font-size: 3.8rem;
+     cursor: pointer;
+
+    div {
+      width 2rem;
+      height: 0.25rem;
+        background-color: ${({ open }) => open ? '#ccc' : '#333'};
+      border-radius: 10px;
+      transform-origin: 1px;
+      transition: all 0.3s linear;
+
+      &:nth-child(1) {
+        transform:  ${({ open }) => open ? 'rotate(45deg)' : 'rotate(0)'};
+      }
+      &:nth-child(2) {
+        transform:  ${({ open }) => open ? 'translateX(100%)' : 'translateX(0)'};
+        opacity: ${({ open }) => open ? 0 : 1};
+      }
+      &:nth-child(3) {
+        transform:  ${({ open }) => open ? 'rotate(-45deg)' : 'rotate(0)'};
+      }
+    }
   }
 `;
 
