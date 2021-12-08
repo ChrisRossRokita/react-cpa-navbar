@@ -16,7 +16,7 @@ const StyledBurger = styled.div`
     div{
         width: 2rem;
         height: 0.25rem;
-        background-color: #333;
+        background-color: #fff;
         border-radius: 10px;
     }
 

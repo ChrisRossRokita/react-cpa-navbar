@@ -2,59 +2,60 @@ import { NavLink as Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 
-/*
-export const Nav = styled.nav`
-  background: #000;
-  height: 80px;
-  display: flex;
-  justify-content: space-between;
-  padding: 0.5rem calc((100vw - 1000px) / 2);
-  z-index: 10;
-`;
-*/
-export const NavLink = styled(Link)`
-  color: red;
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  padding: 0 1rem;
-  height: 100%;
-  cursor: pointer;
-  &.active {
-    color: #15cdfc;
-  }
-`;
 
-    
-    
-   export const Nav = styled.div`
+
+   /*export const NavbarContainer = styled.NavMenu`
   
-   background: #000;
+   background: blue;
    height: 80px;
    display: flex;
    justify-content: space-between;
    padding: 0.5rem calc((100vw - 1000px) / 2);
    z-index: 10;
    color: #3451d2;
-   @media screen and (max-width: 768px) {
+   @media (max-width: 768px) {
+
+
+
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    width: 200px;
+    height: 200px;
+
+      flex-flow: column nowrap;
+      top: 0;
+      right: 0;
+      height: 100vh;
+      width: 300px;
+      padding-top: 0.5rem;
+      padding-bottom: 32.5rem;
+      width: 10px
+      
+      padding-top: 0rem;
+      top: 0;
+      right: 0;
+      transform: translate(-100%, 75%);
+      font-size: 0.88em;
+      cursor: pointer;
+       
+       border-radius: 10px;
+       transform-origin: 1px;
+       transition: all 0.3s linear;
+ 
      
-     background-color: #0D2538;
+   
      position: fixed;
      height: 100vh;
-     width: 300px
-     display: block;
+     width: 10px
+     display: block; 
      padding-top: 3.5rem;
-     
      top: 0;
      right: 0;
      transform: translate(-100%, 75%);
-     font-size: 3.8rem;
+     font-size: 1.15em;
      cursor: pointer;
-
-    div {
-      width 2rem;
-      height: 0.25rem;
-        background-color: ${({ open }) => open ? '#ccc' : '#333'};
+      background-color: ${({ open }) => open ? 'teal' : 'green'};
       border-radius: 10px;
       transform-origin: 1px;
       transition: all 0.3s linear;
@@ -73,27 +74,76 @@ export const NavLink = styled(Link)`
   }
 `;
 
+export const NavLink = styled(Link)`
+  list-style: none;
+  display: inline;
+  flex-flow: row nowrap;
+  align-items: center; 
+  text-decoration: none;
+  padding: 0 1rem;
+  height: 100%;
+  cursor: pointer;
+  &.active {
+    color: #15cdfc;
+  }
+  @media (max-width: 768px;) {
+
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    width: 200px;
+    height: 200px;
+
+
+    flex-flow: column nowrap;
+    background-color: red;
+    position: fixed;
+    top: 0
+    right: 0
+    width: 300px;
+    padding-top: 3.5rem;
+  } 
+`;
+
 export const NavMenu = styled.div`
   display: flex;
   align-items: center;
   margin-right: -24px;
-  /* Second Nav */
-  /* margin-right: 24px; */
-  /* Third Nav */
-  /* width: 100vw;
-  white-space: nowrap; */
-  @media screen and (max-width: 768px) {
-    display: none;
-  }
-`;
+ /* @media (max-width: 768px) {
+
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    width: 200px;
+    height: 200px;
+
+      flex-flow: column nowrap;
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 100vh;
+      width: 300px;
+      padding-top: 0.5rem;
+      padding-bottom: 32.5rem;
+      width: 10px
+      display: inline-block;
+      padding-top: 0rem;
+      top: 0;
+      right: 0;
+      transform: translate(-100%, 75%);
+      font-size: 0.88em;
+      cursor: pointer;
+       background-color: ${({ open }) => open ? 'teal' : 'orange'};
+       border-radius: 10px;
+       transform-origin: 1px;
+       transition: all 0.3s linear; 
+  
+`
 
 export const NavBtn = styled.nav`
   display: flex;
   align-items: center;
   margin-right: 24px;
-  /* Third Nav */
-  /* justify-content: flex-end;
-  width: 100vw; */
   @media screen and (max-width: 768px) {
     display: none;
   }
@@ -109,7 +159,7 @@ export const NavBtnLink = styled(Link)`
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   text-decoration: none;
-  /* Second Nav */
+  
   margin-left: 24px;
   &:hover {
     transition: all 0.2s ease-in-out;
@@ -117,3 +167,4 @@ export const NavBtnLink = styled(Link)`
     color: #010606;
   }
 `;
+*/
