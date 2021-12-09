@@ -1,5 +1,4 @@
 import React, { useState }from 'react';
-//import { Bars } from './NavbarElements';
 import styled from 'styled-components'
 
 
